@@ -1,0 +1,95 @@
+{
+  "namespace": "com.practice.bank",
+  "type": "record",
+  "name": "BankMarketing",
+  "fields": [
+    {
+      "name": "client_id",
+      "type" : "int"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    },
+    {
+      "name": "job",
+      "type": "string"
+    },
+    {
+      "name": "marital",
+      "type": "string"
+    },
+    {
+      "name": "education",
+      "type": "string"
+    },
+    {
+      "name": "credit",
+      "type": "string"
+    },
+    {
+      "name": "housing",
+      "type": "string" 
+    },
+    {
+      "name": "loan",
+      "type": "string"
+    },
+    {
+      "name": "contact",
+      "type": "string"
+    },
+    {
+      "name": "day_of_week",
+      "type": "string"
+    },
+    {
+      "name": "duration",
+      "type": "int"
+    },
+    {
+      "name": "campaign",
+      "type": "int"
+    },
+    {
+      "name": "pdays",
+      "type": "int"
+    },
+    {
+      "name": "previous",
+      "type": "int"
+    },
+    {
+      "name": "poutcome",
+      "type": "string"
+    },
+    {
+      "name": "emp_var_rate",
+      "type": "float"
+    },
+    {
+      "name": "cons_price_idx",
+      "type": "float"
+    },
+    {
+      "name": "cons_conf_idx",
+      "type": "float"
+    },
+    {
+      "name": "euribor3m",
+      "type": "float"
+    },
+    {
+      "name": "nr_employed",
+      "type": "float"
+    },
+    {
+      "name": "y",
+      "type": "string"
+    },
+    {
+      "name": "date",
+      "type": "string"
+    }
+  ]
+}
