@@ -76,12 +76,12 @@
 
     A. Clone this project
             
-        git clone https://github.com/blitzkz23/final-project-end-to-end-banking-campaign-pipeline.git
+        git clone https://github.com/addin12/DF9-final-project.git
         
     B. Open this project in terminal and navigate to the directory of kafka_avro folder	
         
         # change directory
-        cd src/stream-processing/kafka_avro
+        cd sources/stream_processing
         
     C. Install the required Kafka library, on terminal run following command
 
@@ -113,4 +113,4 @@
         
     The messages can be read from the very first message or start from specific position in the topic, its controlled by `auto.offset.reset` configuration    parameter on the Kafka Consumer.
     
-
+![image](https://user-images.githubusercontent.com/89466634/230162441-d63e346e-ca4d-4959-89a1-56374bce0a19.png)
