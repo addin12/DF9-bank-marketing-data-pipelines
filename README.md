@@ -28,6 +28,7 @@ Access the dashboard in Tableau Public [here](https://public.tableau.com/app/pro
 ## Links
 - [Deck Slides](https://docs.google.com/presentation/d/1eUcCzFZcUY7ccTL7gGFcOrrQB3iMTxqG/edit?usp=sharing&ouid=108195231321016830672&rtpof=true&sd=true)
 - [Analytics Dashboard](https://public.tableau.com/app/profile/muhammad.sholahuddin.al.ayubi/viz/final-project-dashboard/Dashboard1?publish=yes)
+- [Installation & Dependencies Guide](https://github.com/addin12/DF9-final-project/blob/main/sources/README.MD)
 
 ## Our Team Members
 - Mahendra Diwasasri Reka Pravyana
