@@ -113,5 +113,4 @@
         
     The messages can be read from the very first message or start from specific position in the topic, its controlled by `auto.offset.reset` configuration    parameter on the Kafka Consumer.
     
-   ![kafka producer consumer](https://user-images.githubusercontent.com/85284506/209254515-7668f123-dbce-4507-bf7e-6cb73153073c.png)
 
