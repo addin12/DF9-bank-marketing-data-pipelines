@@ -1,0 +1,23 @@
+[2023-04-04T18:07:19.983+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: data_ingestion_final_project.format_to_parquet_task manual__2023-04-04T18:07:00.147143+00:00 [queued]>
+[2023-04-04T18:07:20.018+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: data_ingestion_final_project.format_to_parquet_task manual__2023-04-04T18:07:00.147143+00:00 [queued]>
+[2023-04-04T18:07:20.019+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-04T18:07:20.020+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2023-04-04T18:07:20.021+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-04T18:07:20.075+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): format_to_parquet_task> on 2023-04-04 18:07:00.147143+00:00
+[2023-04-04T18:07:20.095+0000] {standard_task_runner.py:55} INFO - Started process 194 to run task
+[2023-04-04T18:07:20.111+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_final_project', 'format_to_parquet_task', 'manual__2023-04-04T18:07:00.147143+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_final_project.py', '--cfg-path', '/tmp/tmpy28m_j61']
+[2023-04-04T18:07:20.117+0000] {standard_task_runner.py:83} INFO - Job 44: Subtask format_to_parquet_task
+[2023-04-04T18:07:20.298+0000] {task_command.py:376} INFO - Running <TaskInstance: data_ingestion_final_project.format_to_parquet_task manual__2023-04-04T18:07:00.147143+00:00 [running]> on host de0aa116b028
+[2023-04-04T18:07:20.525+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_final_project
+AIRFLOW_CTX_TASK_ID=format_to_parquet_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-04T18:07:00.147143+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-04T18:07:00.147143+00:00
+[2023-04-04T18:07:22.145+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-04-04T18:07:22.179+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=data_ingestion_final_project, task_id=format_to_parquet_task, execution_date=20230404T180700, start_date=20230404T180719, end_date=20230404T180722
+[2023-04-04T18:07:22.263+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-04-04T18:07:22.342+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check

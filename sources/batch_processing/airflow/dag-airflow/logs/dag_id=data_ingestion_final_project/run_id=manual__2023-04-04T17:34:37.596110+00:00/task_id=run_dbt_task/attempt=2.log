@@ -1,0 +1,36 @@
+[2023-04-04T17:40:16.344+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: data_ingestion_final_project.run_dbt_task manual__2023-04-04T17:34:37.596110+00:00 [queued]>
+[2023-04-04T17:40:16.363+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: data_ingestion_final_project.run_dbt_task manual__2023-04-04T17:34:37.596110+00:00 [queued]>
+[2023-04-04T17:40:16.364+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-04T17:40:16.365+0000] {taskinstance.py:1363} INFO - Starting attempt 2 of 2
+[2023-04-04T17:40:16.365+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-04T17:40:16.397+0000] {taskinstance.py:1383} INFO - Executing <Task(BashOperator): run_dbt_task> on 2023-04-04 17:34:37.596110+00:00
+[2023-04-04T17:40:16.413+0000] {standard_task_runner.py:55} INFO - Started process 352 to run task
+[2023-04-04T17:40:16.423+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_final_project', 'run_dbt_task', 'manual__2023-04-04T17:34:37.596110+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_final_project.py', '--cfg-path', '/tmp/tmp11sbgknd']
+[2023-04-04T17:40:16.427+0000] {standard_task_runner.py:83} INFO - Job 40: Subtask run_dbt_task
+[2023-04-04T17:40:16.549+0000] {task_command.py:376} INFO - Running <TaskInstance: data_ingestion_final_project.run_dbt_task manual__2023-04-04T17:34:37.596110+00:00 [running]> on host 87ed9d2b4721
+[2023-04-04T17:40:16.683+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_final_project
+AIRFLOW_CTX_TASK_ID=run_dbt_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-04T17:34:37.596110+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-04T17:34:37.596110+00:00
+[2023-04-04T17:40:16.688+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-04-04T17:40:16.689+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /opt/***/bank_marketing_dwh && dbt run --project-dir dbt --models staging dwh ']
+[2023-04-04T17:40:16.724+0000] {subprocess.py:86} INFO - Output:
+[2023-04-04T17:40:22.300+0000] {subprocess.py:93} INFO - [0m17:40:22  Encountered an error:
+[2023-04-04T17:40:22.302+0000] {subprocess.py:93} INFO - Runtime Error
+[2023-04-04T17:40:22.302+0000] {subprocess.py:93} INFO -   fatal: Invalid --project-dir flag. Not a dbt project. Missing dbt_project.yml file
+[2023-04-04T17:40:22.807+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2023-04-04T17:40:22.847+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2023-04-04T17:40:22.861+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=data_ingestion_final_project, task_id=run_dbt_task, execution_date=20230404T173437, start_date=20230404T174016, end_date=20230404T174022
+[2023-04-04T17:40:22.905+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 40 for task run_dbt_task (Bash command failed. The command returned a non-zero exit code 2.; 352)
+[2023-04-04T17:40:22.958+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-04-04T17:40:23.027+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
