@@ -12,3 +12,4 @@ SELECT
     *
   FROM
     {{ ref('stg_fact_bank_marketing') }}
+-- coba
