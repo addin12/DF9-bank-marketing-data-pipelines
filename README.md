@@ -17,7 +17,7 @@ In order solve the problems, as a Data Engineer we are proposing objectives as f
 
 ## End-to-End Schema with Lambda Architecture
 
-![image](https://user-images.githubusercontent.com/25638454/230105761-45111265-fdd7-4a5a-947c-a15432d4016b.png)
+![image](https://user-images.githubusercontent.com/25638454/230121368-e7253ff8-32c6-4742-af9d-5c206c3b36c2.png)
 
 ## Data Visualization Dashboard
 
@@ -31,7 +31,7 @@ Access the dashboard in Tableau Public [here](https://public.tableau.com/app/pro
 - [Installation & Dependencies Guide](https://github.com/addin12/DF9-final-project/blob/main/sources/README.MD)
 
 ## Our Team Members
-- Mahendra Diwasasri Reka Pravyana
-- Febrianti
-- Dimas Rifa’i Lombu
-- Muhammad Sholahuddin Al Ayubi
+- [Mahendra Diwasasri Reka Pravyana](https://www.linkedin.com/in/mahendradiwasasri)
+- [Febrianti](https://www.linkedin.com/in/febs)
+- [Dimas Rifa’i Lombu](https://www.linkedin.com/in/dimaslombu)
+- [Muhammad Sholahuddin Al Ayubi](https://www.linkedin.com/in/saladinal/)
