@@ -1,0 +1,145 @@
+version: 2
+
+models:
+  - name: fact_bank_marketing
+    description: "fact table"
+    columns:
+      - name: client_id
+        description: "Identifier for client"
+        tests:
+          - not_null
+      - name: date
+        description: "The date when the deposit offer was made to the customer"
+      - name: day_of_week
+        description: "Last contact day of the week"
+      - name: age
+        description: "client's age"
+      - name: job_id
+        description: "Identifier for job types"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_job')
+              field: job_id
+      - name: marital_id
+        description: "Identifier for marital types"      
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_marital')
+              field: marital_id
+      - name: education_id
+        description: "Identifier for education types"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_education')
+              field: education_id
+      - name: credit_id
+        description: "Identifier whether the client has default credit"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_credit')
+              field: credit_id
+      - name: housing_loan
+        description: "Indicates whether the customer has a housing loan or not"
+      - name: personal_loan
+        description: "Indicates whether the customer has a personal loan or not"
+      - name: contact_id
+        description: "Identifier for contact types"      
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_contact')
+              field: contact_id              
+      - name: duration
+        description: "last contact duration, in seconds (numeric)"
+      - name: campaign
+        description: "number of contacts performed during this campaign and for this client"
+      - name: poutcome
+        description: "utcome of the previous marketing campaign"
+      - name: emp_var_rate
+        description: "employment variation rate - quarterly indicator"
+      - name: cons_price_idx
+        description: "consumer price index - monthly indicator"
+      - name: cons_conf_idx
+        description: "consumer confidence index - monthly indicator"
+      - name: euribor3m
+        description: "euribor 3 month rate - daily indicator"
+      - name: nr_employed
+        description: "number of employees - quarterly indicator (numeric)"
+      - name: subscribe
+        description: "has the client subscribed a term deposit?"
+        tests:
+          - not_null
+
+
+  - name: dim_contact
+    description: "Information about contact communication type"
+    columns:
+    - name: contact_id
+      tests:
+        - not_null
+        - unique
+    columns:
+    - name: contact_type
+      tests:
+        - not_null
+        - accepted_values:
+            values: ['telephone', 'cellular'] 
+
+  - name: dim_credit
+    description: "Information about credit default"
+    columns:
+    - name: credit_id
+      tests:
+        - not_null
+        - unique
+    - name: credit_type
+      tests:
+        - not_null
+        - accepted_values:
+            values: ['no', 'yes', 'unknown']
+
+  - name: dim_education
+    description: "Information about education level"
+    columns:
+    - name: education_id
+      tests:
+        - not_null
+        - unique
+    columns:
+    - name: education_type
+      tests:
+        - not_null
+        - accepted_values:
+            values: ['basic', 'high.school', 'professional.course', 'unknown', 'university.degree', 'illiterate']
+  
+  - name: dim_job
+    description: "Information about job id"
+    columns:
+    - name: job_id
+      tests:
+        - unique
+        - not_null
+    columns:
+    - name: job_type
+      tests:
+        - not_null
+        - accepted_values:
+            values: ['housemaid', 'services', 'admin.', 'blue-collar', 'technician', 'retired', 'management', 'unemployed', 'self-employed', 'unknown', 'entrepreneur', 'student']
+
+  - name: dim_marital
+    description: "Information about marital status"
+    columns:
+    - name: marital_id
+      tests:
+        - not_null
+        - unique
+    columns:
+    - name: marital_type
+      tests:
+        - not_null
+        - accepted_values:
+            values: ['married', 'single', 'divorced', 'unknown']

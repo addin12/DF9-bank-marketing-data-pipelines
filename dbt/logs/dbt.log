@@ -1,0 +1,87 @@
+
+
+============================== 2023-03-29 05:41:28.672233 | 9ad623de-f602-4eaa-b8cc-d85f59c209d3 ==============================
+[0m05:41:28.672233 [info ] [MainThread]: Running with dbt=1.4.4
+[0m05:41:28.675412 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/user/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m05:41:28.676298 [debug] [MainThread]: Tracking: tracking
+[0m05:41:28.715345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e2715b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e281910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e2819d0>]}
+[0m05:41:44.222682 [debug] [MainThread]: Starter project path: /usr/local/Cellar/dbt-bigquery/1.4.1/libexec/lib/python3.9/site-packages/dbt/include/starter_project
+[0m05:43:53.875164 [info ] [MainThread]: Profile bank_campaign_dwh written to /Users/user/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m05:43:53.876727 [info ] [MainThread]: 
+Your new dbt project "bank_campaign_dwh" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m05:43:53.877624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fe37c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fe379a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fe37fa0>]}
+[0m05:43:53.878276 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-03 16:19:59.838450 | 3b68af68-2ce7-4629-a46b-e38ab9621ab3 ==============================
+[0m16:19:59.838450 [info ] [MainThread]: Running with dbt=1.4.4
+[0m16:19:59.841535 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/user/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m16:19:59.842115 [debug] [MainThread]: Tracking: tracking
+[0m16:19:59.878418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110fb7160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110fb7fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110fb79d0>]}
+[0m16:20:31.772803 [debug] [MainThread]: Starter project path: /usr/local/Cellar/dbt-bigquery/1.4.1/libexec/lib/python3.9/site-packages/dbt/include/starter_project
+[0m16:21:40.163778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112bbb220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112bbbfa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112bbb3a0>]}
+[0m16:21:40.174833 [debug] [MainThread]: Flushing usage events
+[0m16:21:41.663539 [error] [MainThread]: Encountered an error:
+
+[0m16:21:41.668820 [error] [MainThread]: Traceback (most recent call last):
+  File "/usr/local/Cellar/dbt-bigquery/1.4.1/libexec/lib/python3.9/site-packages/dbt/main.py", line 136, in main
+    results, succeeded = handle_and_check(args)
+  File "/usr/local/Cellar/dbt-bigquery/1.4.1/libexec/lib/python3.9/site-packages/dbt/main.py", line 206, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/usr/local/Cellar/dbt-bigquery/1.4.1/libexec/lib/python3.9/site-packages/dbt/main.py", line 253, in run_from_args
+    results = task.run()
+  File "/usr/local/Cellar/dbt-bigquery/1.4.1/libexec/lib/python3.9/site-packages/dbt/task/init.py", line 305, in run
+    self.create_profile_from_target(adapter, profile_name=project_name)
+  File "/usr/local/Cellar/dbt-bigquery/1.4.1/libexec/lib/python3.9/site-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/usr/local/Cellar/dbt-bigquery/1.4.1/libexec/lib/python3.9/site-packages/dbt/task/init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/usr/local/Cellar/dbt-bigquery/1.4.1/libexec/lib/python3.9/site-packages/dbt/task/init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/usr/local/Cellar/dbt-bigquery/1.4.1/libexec/lib/python3.9/site-packages/click/termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "/usr/local/Cellar/dbt-bigquery/1.4.1/libexec/lib/python3.9/site-packages/click/termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+
+
+============================== 2023-04-03 16:26:43.198676 | 98c07bbf-4b0b-4e7a-bdb3-30d4a546a707 ==============================
+[0m16:26:43.198676 [info ] [MainThread]: Running with dbt=1.4.4
+[0m16:26:43.201781 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/user/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m16:26:43.202308 [debug] [MainThread]: Tracking: tracking
+[0m16:26:43.230738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111943340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111924490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111924910>]}
+[0m16:27:00.200956 [debug] [MainThread]: Starter project path: /usr/local/Cellar/dbt-bigquery/1.4.1/libexec/lib/python3.9/site-packages/dbt/include/starter_project
+[0m16:27:42.102414 [info ] [MainThread]: Profile bank_campaign_datamart written to /Users/user/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:27:42.104051 [info ] [MainThread]: 
+Your new dbt project "bank_campaign_datamart" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:27:42.104731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11043b160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1104ffd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1104ff490>]}
+[0m16:27:42.105357 [debug] [MainThread]: Flushing usage events

@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+    - name: bank_marketing_dwh
+      database: datafellowship9
+      tables:
+        - name: bank_marketing
+
+models:
+  - name: stg_bank_marketing
+    description: staging layer for bank campaign data warehouses

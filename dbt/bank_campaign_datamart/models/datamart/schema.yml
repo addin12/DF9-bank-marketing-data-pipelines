@@ -1,0 +1,97 @@
+version: 2
+
+models:
+  - name: partition_cluster_time
+    description: "partitioned & clustered"
+    columns:
+      - name: client_id
+        description: "Identifier for client"
+        tests:
+          - not_null
+      - name: date
+        description: "The date when the deposit offer was made to the customer"
+      - name: day_of_week
+        description: "Last contact day of the week"
+      - name: age
+        description: "client's age"
+      - name: job_type
+        description: "Type of client's job"
+        tests:
+          - not_null
+      - name: marital_type
+        description: "Marital status"      
+        tests:
+          - not_null
+      - name: education_type
+        description: "Type of education"
+        tests:
+          - not_null
+      - name: credit_type
+        description: "Identifier whether the client has default credit"
+        tests:
+          - not_null
+      - name: housing_loan
+        description: "Indicates whether the customer has a housing loan or not"
+      - name: personal_loan
+        description: "Indicates whether the customer has a personal loan or not"
+      - name: contact_type
+        description: "contact communication type"      
+        tests:
+          - not_null           
+      - name: duration
+        description: "last contact duration, in seconds (numeric)"
+      - name: campaign
+        description: "number of contacts performed during this campaign and for this client"
+      - name: poutcome
+        description: "utcome of the previous marketing campaign"
+      - name: emp_var_rate
+        description: "employment variation rate - quarterly indicator"
+      - name: cons_price_idx
+        description: "consumer price index - monthly indicator"
+      - name: cons_conf_idx
+        description: "consumer confidence index - monthly indicator"
+      - name: euribor3m
+        description: "euribor 3 month rate - daily indicator"
+      - name: nr_employed
+        description: "number of employees - quarterly indicator (numeric)"
+      - name: subscribe
+        description: "has the client subscribed a term deposit?"
+        tests:
+          - not_null
+  
+  - name: subs_by_finance
+    description: "Number of subscribers based on credit, house loans and personal loans"
+    columns:
+    - name: credit_type
+    - name: housing_loan
+    - name: personal_loan
+    - name: subs
+      tests:
+        - not_null
+    - name: not_subs
+      tests:
+        - not_null
+  - name: subs_by_profile
+    description: "Number of subscribers based on job, education and marital"
+    columns:
+    - name: education_type
+    - name: job_type
+    - name: marital_type
+    - name: subs
+      tests:
+        - not_null
+    - name: not_subs  
+      tests:
+        - not_null  
+  - name: subs_by_time
+    description: "Number of subscribers based on date and day of week"
+    columns:
+    - name: date
+    - name: day_of_week
+    - name: subs
+      tests:
+        - not_null
+    - name: not_subs
+      tests:
+        - not_null
+
