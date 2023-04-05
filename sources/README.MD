@@ -18,7 +18,7 @@
 
     A. Clone this project
             
-        git clone https://github.com/blitzkz23/final-project-end-to-end-banking-campaign-pipeline.git
+        git clone https://github.com/addin12/DF9-final-project.git
         
     B. Open this project in terminal and change directory until docker-airflow folder, also build the docker file
         
@@ -28,7 +28,6 @@
         # run build docker
         docker build --rm --build-arg AIRFLOW_DEPS="gcp" -t docker-airflow-spark:1.10.7_3.1.2 .
         
-
     C. After docker build complete, return to previous directory and run docker compose, then wait for a few minutes for all the container to be up
 
         docker compose up
@@ -39,10 +38,7 @@
     E. Configure spark connection acessing airflow web UI http://localhost:8282 and going to Connections
             ![](../docs/airflow_connections_menu.png "Airflow Connections")
 
-    F. Edit the spark_default connection inserting `spark://spark` in Host field and Port `7077`
-            ![](.//docs/airflow_spark_connection.png "Airflow Spark connection")
-
-    G. Also edit the bigquery_default connection, and insert your project name:
+    F. Also edit the bigquery_default connection, and insert your project name:
             ![](../docs/airflow_bigquery_connection.png "Airflow BigQuery connection")
 
     H. Airflow DAGs for batch processing is ready to go! included task on the DAG are up to uploading data from gcs to BigQuery table, unfortunately the dbt transformation are not included yet on the DAGs because of the dependencies conflict.  But afraid not its simple enough, follow the next step.
@@ -56,8 +52,6 @@
        
         # return to prev dir
         cd ..
-
-        cd dbt
 
         cd bank_campaign_dwh
 
