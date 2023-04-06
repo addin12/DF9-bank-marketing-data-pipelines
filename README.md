@@ -23,7 +23,7 @@ In order solve the problems, as a Data Engineer we are proposing objectives as f
 
 Access the dashboard in Tableau Public [here](https://public.tableau.com/app/profile/muhammad.sholahuddin.al.ayubi/viz/final-project-dashboard/Dashboard1?publish=yes)
 
-![image](https://user-images.githubusercontent.com/25638454/230109254-8a55f249-5ade-4f3c-b573-d38869f02945.png)
+![image](https://user-images.githubusercontent.com/25638454/230283250-f72ed385-45e0-4580-83a0-b054e75928cf.png)
 
 ## Links
 - [Deck Slides](https://docs.google.com/presentation/d/1eUcCzFZcUY7ccTL7gGFcOrrQB3iMTxqG/edit?usp=sharing&ouid=108195231321016830672&rtpof=true&sd=true)
