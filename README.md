@@ -17,7 +17,7 @@ In order solve the problems, as a Data Engineer we are proposing objectives as f
 
 ## End-to-End Schema with Lambda Architecture
 
-![image](https://user-images.githubusercontent.com/25638454/230121368-e7253ff8-32c6-4742-af9d-5c206c3b36c2.png)
+![image](https://user-images.githubusercontent.com/25638454/230260562-ddf206b6-9f01-4b0b-b8c7-208749f0f288.png)
 
 ## Data Visualization Dashboard
 
