@@ -33,9 +33,9 @@
         docker compose up
         
 
-    D. Open the airflow webserver UI on external-IP:8282 / localhost:8282 (if you have ports forwarding)
+    D. Open the airflow webserver UI on external-IP:8080 / localhost:8080 (if you have ports forwarding)
     
-    E. Configure spark connection acessing airflow web UI http://localhost:8282 and going to Connections
+    E. Configure spark connection acessing airflow web UI http://localhost:8080 and going to Connections
             ![](../docs/airflow_connections_menu.png "Airflow Connections")
 
     F. Also edit the bigquery_default connection, and insert your project name:
