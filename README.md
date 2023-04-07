@@ -30,7 +30,7 @@ Access the dashboard in Tableau Public [here](https://public.tableau.com/app/pro
 - [Analytics Dashboard](https://public.tableau.com/app/profile/muhammad.sholahuddin.al.ayubi/viz/final-project-dashboard/Dashboard1?publish=yes)
 - [Installation & Dependencies Guide](https://github.com/addin12/DF9-final-project/blob/main/sources/README.MD)
 
-## Our Team Members
+## Contributors
 - [Mahendra Diwasasri Reka Pravyana](https://www.linkedin.com/in/mahendradiwasasri)
 - [Febrianti](https://www.linkedin.com/in/febs)
 - [Dimas Rifa’i Lombu](https://www.linkedin.com/in/dimaslombu)
