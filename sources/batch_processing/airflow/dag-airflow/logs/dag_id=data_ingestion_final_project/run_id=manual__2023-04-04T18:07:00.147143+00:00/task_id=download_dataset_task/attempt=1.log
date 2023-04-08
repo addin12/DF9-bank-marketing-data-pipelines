@@ -1,31 +1,0 @@
-[2023-04-04T18:07:11.171+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: data_ingestion_final_project.download_dataset_task manual__2023-04-04T18:07:00.147143+00:00 [queued]>
-[2023-04-04T18:07:11.280+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: data_ingestion_final_project.download_dataset_task manual__2023-04-04T18:07:00.147143+00:00 [queued]>
-[2023-04-04T18:07:11.286+0000] {taskinstance.py:1362} INFO - 
---------------------------------------------------------------------------------
-[2023-04-04T18:07:11.302+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
-[2023-04-04T18:07:11.303+0000] {taskinstance.py:1364} INFO - 
---------------------------------------------------------------------------------
-[2023-04-04T18:07:11.444+0000] {taskinstance.py:1383} INFO - Executing <Task(BashOperator): download_dataset_task> on 2023-04-04 18:07:00.147143+00:00
-[2023-04-04T18:07:11.524+0000] {standard_task_runner.py:55} INFO - Started process 182 to run task
-[2023-04-04T18:07:11.615+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_final_project', 'download_dataset_task', 'manual__2023-04-04T18:07:00.147143+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_final_project.py', '--cfg-path', '/tmp/tmp1r9fl8l7']
-[2023-04-04T18:07:11.642+0000] {standard_task_runner.py:83} INFO - Job 43: Subtask download_dataset_task
-[2023-04-04T18:07:12.274+0000] {task_command.py:376} INFO - Running <TaskInstance: data_ingestion_final_project.download_dataset_task manual__2023-04-04T18:07:00.147143+00:00 [running]> on host de0aa116b028
-[2023-04-04T18:07:13.139+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
-AIRFLOW_CTX_DAG_OWNER=***
-AIRFLOW_CTX_DAG_ID=data_ingestion_final_project
-AIRFLOW_CTX_TASK_ID=download_dataset_task
-AIRFLOW_CTX_EXECUTION_DATE=2023-04-04T18:07:00.147143+00:00
-AIRFLOW_CTX_TRY_NUMBER=1
-AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-04T18:07:00.147143+00:00
-[2023-04-04T18:07:13.143+0000] {subprocess.py:63} INFO - Tmp dir root location: 
- /tmp
-[2023-04-04T18:07:13.155+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '#!/bin/bash\nfileid="1Fab7jePW3LKFUNyJf2BoH6ywrDiXatNt"\nfilename="bank_marketing.csv"\nhtml=`curl -c ./cookie -s -L "https://drive.google.com/uc?export=download&id=${fileid}"`\ncurl -Lb ./cookie "https://drive.google.com/uc?export=download&`echo ${html}|grep -Po \'(confirm=[a-zA-Z0-9\\-_]+)\'`&id=${fileid}" -o "/opt/***/${filename}"']
-[2023-04-04T18:07:13.360+0000] {subprocess.py:86} INFO - Output:
-[2023-04-04T18:07:16.311+0000] {subprocess.py:93} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-[2023-04-04T18:07:16.314+0000] {subprocess.py:93} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
-[2023-04-04T18:07:17.238+0000] {subprocess.py:93} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-[2023-04-04T18:07:17.385+0000] {subprocess.py:93} INFO -   0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100 5264k  100 5264k    0     0  4901k      0  0:00:01  0:00:01 --:--:--  177M
-[2023-04-04T18:07:17.391+0000] {subprocess.py:97} INFO - Command exited with return code 0
-[2023-04-04T18:07:17.486+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=data_ingestion_final_project, task_id=download_dataset_task, execution_date=20230404T180700, start_date=20230404T180711, end_date=20230404T180717
-[2023-04-04T18:07:17.590+0000] {local_task_job.py:159} INFO - Task exited with return code 0
-[2023-04-04T18:07:17.642+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
