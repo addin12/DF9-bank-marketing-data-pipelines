@@ -5,6 +5,8 @@ from pyspark.sql.functions import when
 from pyspark.sql.functions import regexp_replace
 from pyspark.sql.functions import to_date, date_format
 from pyspark.sql.functions import concat, lit
+import pandas_gbq
+
 
 # Creating the spark session
 spark = SparkSession.builder \
@@ -46,7 +48,18 @@ df = df.withColumn("date2", concat(df["year"], lit("-"), df["date"])) \
     
 df = df.withColumnRenamed('date2', 'date')
 
-# Save as CSV file
-df.toPandas().to_csv("bank-marketing.csv", index=False)  
+# Change to pandas dataframe
+df_pandas = df.toPandas()
 
+# Droject id on Google Cloud Platform
+project_id = 'datafellowship9'
 
+# Dataset id where we want to store data
+dataset_id = 'bank_marketing_dwh'
+
+# Create function to load data
+def load_to_bq(df, table_name):
+    pandas_gbq.to_gbq(df, f'{dataset_id}.{table_name}', project_id=project_id)
+
+# Call function to load data
+load_to_bq(df_pandas, 'bank_marketing')
